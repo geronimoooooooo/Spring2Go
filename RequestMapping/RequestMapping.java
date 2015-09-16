@@ -9,3 +9,14 @@
 
       return "success";
   }
+
+
+@RequestMapping(value="/Contact",method=RequestMethod.GET)
+    ModelAndView Contact(Model model)
+    {
+        model.addAttribute("UserQuery",new Query());
+        User userForm = new User();
+        model.addAttribute("command", userForm);
+
+        return new ModelAndView("contactView");
+    }
