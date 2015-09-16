@@ -13,3 +13,13 @@
             <input type="submit" value="  OK  "/>
         </div>
     </form:form>
+
+--------------------------------------------------------
+<form:form  method="post" commandName="user">
+------------------------------------------
+model.addAttribute("**userLogin**", userForm); // in controller
+return "form"; //in controller
+in JSP you should give
+
+form:form  method="post" action="/user.jsp" modelAttribute="userLogin"
+(instead of modelAttribute/commandName="user")
